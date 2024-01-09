@@ -1,0 +1,40 @@
+<header class='c-header'>
+
+  <div class='o-grid o-grid--center'>
+    <div class='o-grid__col'>
+      <div class='c-header__inner'>
+        <div class='c-logo'>
+          {{#if @site.logo}}
+            <a href='{{ @site.url }}'>
+              <img class='c-logo__img' src='{{ @site.logo }}' alt='{{ @site.title }}' width='' height=''>
+            </a>
+          {{else}}
+            <a class='c-logo__link' href='{{ @site.url }}'>{{ @site.title }}</a>
+          {{/if}}
+        </div>
+
+        <div class='c-nav-wrap'>
+          <ul class='c-nav c-nav--left o-plain-list'>
+            {{ navigation }}
+          </ul>
+
+          <ul class='c-nav c-nav--right  o-plain-list'>
+            <li class='c-nav__item'>
+              <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button>
+            </li>
+              <li class='c-nav__item'><a href='https://precoro.com/get-a-trial' class='c-btn c-btn--small c-btn--outline'>{{t 'Free trial' }}</a></li>
+              <li class='c-nav__item'><a href='https://precoro.com/get-a-demo' class='c-btn c-btn--small c-btn--action'>{{t 'Book a Demo' }}</a></li>
+
+          </ul>
+        </div>
+
+        <div class='js-nav-toggle c-nav-toggle'>
+          <span class='c-nav-toggle__icon'></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+{{> search-form }}

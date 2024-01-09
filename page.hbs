@@ -1,0 +1,17 @@
+{{!< default}}
+
+{{#post}}
+
+<article class='c-{{ post_class }}'>
+  {{> post-header }}
+
+  <section class='c-content'>
+    {{ content }}
+  </section>
+
+  {{!-- If the page is published for subscribers and paid members and the visitor is not one of those, show the upgrade box --}}
+
+  <hr>
+</article>
+
+{{/post}}

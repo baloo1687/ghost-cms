@@ -1,0 +1,45 @@
+<div class='c-tags-list-container'>
+  <div class='o-grid'>
+    <div class='o-grid__col o-grid__col--full'>
+      {{#get 'tags' limit='all'}}
+        <div class='c-tags-list-wrap'>
+          <ul class='c-tags-list o-plain-list dragscroll'>
+            <li class='c-tags-list__item'>
+              <a href='/blog/' class='c-tags-list__link'>{{t 'Latest' }}</a>
+            </li>
+            <li class='c-tags-list__item'>
+              <a href='/blog/tag/case-study/' class='c-tags-list__link'>{{t 'Case Studies' }}</a>
+            </li>
+            <li class='c-tags-list__item'>
+              <a href='/blog/tag/product-updates/' class='c-tags-list__link'>{{t 'Product Updates' }}</a>
+            </li>
+            <li class='c-tags-list__item'>
+              <a href='/blog/tag/news/' class='c-tags-list__link'>{{t 'Precoro News' }}</a>
+            </li>
+            <li class='c-tags-list__item'>
+              <a href='/blog/tag/integration-tips/' class='c-tags-list__link'>{{t 'Integration Tips' }}</a>
+            </li>
+            <li class='c-tags-list__item'>
+              <a href='/blog/tag/procurement-basics/' class='c-tags-list__link'>{{t 'Procurement Basics' }}</a>
+            </li>
+
+          </ul>
+        </div>
+      {{/get}}
+    </div>
+  </div>
+</div>
+
+<script>
+  // Add current class the to current tag item if the URL matches the tag URL
+  window.addEventListener('DOMContentLoaded', (event) => {
+    var url_pathname = window.location.pathname;
+
+    document.querySelectorAll('.c-tags-list__link').forEach(function(index) {
+      var current_tag_item = index;
+      if (url_pathname === current_tag_item.getAttribute('href')) {
+        current_tag_item.className += ' ' + 'c-tags-list__link--current';
+      }
+    });
+  });
+</script>

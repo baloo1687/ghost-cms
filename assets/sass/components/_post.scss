@@ -1,0 +1,15 @@
+/*------------------------------------*\
+  Components > Post
+\*------------------------------------*/
+
+.c-post {
+  > * + * {
+    margin-top: $space-32;
+  }
+
+  @include mq($until: desktop) {
+    .c-subscribe--center {
+      display: none;
+    }
+  }
+}
