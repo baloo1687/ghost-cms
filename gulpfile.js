@@ -120,7 +120,7 @@
       '!.git/**',
       '!.DS_Store'
     ], { dot: true })
-    .pipe(zip('krabi.zip'))
+    .pipe(zip('precoro-ghost-theme.zip'))
     .pipe(gulp.dest('../'))
     done();
   });

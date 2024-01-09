@@ -145,4 +145,17 @@ $(document).ready(function() {
       }
     });
   });
+
+  const allCustomComponents = [...document.querySelectorAll('.js-accordion')];
+
+  if (allCustomComponents.length == 0) return;
+
+  allCustomComponents.forEach(async component => {
+    console.log(component);
+    const accordion = (await import('./components/accordion.js')).accordion;
+    accordion();
+  })
+
+
+
 });
