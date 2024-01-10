@@ -15,12 +15,21 @@
       </div>
     {{/if}}
 
-    {{#unless @member}}
+    {{!-- {{#unless @member}} --}}
       <div class='o-grid__col o-grid__col--initial-grow o-grid__col--4-4-s o-grid__col--2-4-m o-grid__col--1-3-l c-footer__section'>
         <p class='c-footer__headline'>{{t 'Subscribe to Precoro Updates' }}</p>
-        {{> subscribe-form inputLabel='subscribe-email-footer'}}
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+        <script>
+          hbspt.forms.create({
+            region: "na1",
+            portalId: "1903299",
+            formId: "33a00e3f-0550-45db-85d9-4795ba487ded",
+            cssClass: 'custom-subscribe-hubspot-form footer-hs-form',
+          });
+        </script>
+        {{!-- {{> subscribe-form inputLabel='subscribe-email-footer'}} --}}
       </div>
-    {{/unless}}
+    {{!-- {{/unless}} --}}
 
     <div class='o-grid__col o-grid__col--4-4-s c-footer__section'>
       <div class='u-type-xs c-footer__copyright'>
